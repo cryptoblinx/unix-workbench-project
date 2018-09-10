@@ -13,10 +13,11 @@ function ask {
 ask
 while [[ $response -ne $guess ]]
 do
-	if [[ $guess -lt $response ]] || [[ $guess -gt $response ]]
+	if [[ $guess -lt $response ]]
 	then
 		echo "the number is too low try again!"
-	else
+	
+	else [[ $guess -gt $response ]]
 		echo "the number is too high try again!"
 	fi
 	ask
